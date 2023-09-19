@@ -1,11 +1,11 @@
 import pygame
-import model
+from model import Game
 from eventmanager import *
 from settings import *
 
 class View(object):
     
-    def __init__(self, event_mng, model):
+    def __init__(self, event_mng: EventManager, model: Game):
         self.event_mng = event_mng
         event_mng.register_listener(self)
         self.screen = None
@@ -13,7 +13,7 @@ class View(object):
         self.smallfont = None
         self.is_initialized = False
 
-    def notify(self, event):
+    def notify(self, event: Event):
         
         if isinstance(event, InitializeEvent):
             self.initialize()

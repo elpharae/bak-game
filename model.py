@@ -3,12 +3,12 @@ from eventmanager import *
 
 class Game(object):
     
-    def __init__(self, event_mng) -> None:
+    def __init__(self, event_mng: EventManager):
         self.event_mng = event_mng   
         event_mng.register_listener(self)
         self.running = True
 
-    def notify(self, event):
+    def notify(self, event: Event):
         if isinstance(event, QuitEvent):
             self.running = False
     

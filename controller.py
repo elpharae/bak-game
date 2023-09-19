@@ -4,7 +4,7 @@ from eventmanager import *
 
 class Keyboard(object):
     
-    def __init__(self, event_mng, model) -> None:
+    def __init__(self, event_mng, model):
         self.event_mng = event_mng
         event_mng.register_listener(self)
         self.model = model
