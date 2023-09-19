@@ -1,0 +1,4 @@
+TITLE = "Animal Crossing DUPE"
+FPS = 60
+WIDTH = 640
+HEIGHT = 400
